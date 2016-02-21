@@ -9,6 +9,7 @@ php:
 install:
   - composer install
   - composer install -d gravatar
+  - ls -fla gravatar
 
 script:
   - vendor/jakub-onderka/php-parallel-lint/parallel-lint --exclude vendor .
@@ -23,5 +24,4 @@ deploy:
   skip_cleanup: true
   on:
     php: 7.0
-    tags: true
     condition: $TRAVIS_PULL_REQUEST = false
