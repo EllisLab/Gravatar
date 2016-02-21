@@ -1,0 +1,5 @@
+{
+    "require": {
+        "forxer/Gravatar": "^1.3"
+    }
+}
