@@ -5,13 +5,13 @@ php:
 
 install:
   - composer install
-  - composer install -d gravatar
-  - ls -fla gravatar
 
 script:
   - vendor/jakub-onderka/php-parallel-lint/parallel-lint --exclude vendor .
 
-before_deploy: "zip -r 'Gravatar' gravatar"
+before_deploy:
+  - composer install -d gravatar
+  - zip -r 'Gravatar' gravatar
 
 deploy:
   provider: releases
