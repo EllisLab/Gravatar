@@ -13,4 +13,15 @@ install:
 script:
   - vendor/jakub-onderka/php-parallel-lint/parallel-lint --exclude vendor .
 
+before_deploy: "zip -r 'Gravatar' gravatar"
 
+deploy:
+  provider: releases
+  api_key:
+    secure: FbsYty/+8Nh8NeHirzAzjTj5V+KqA2Yz/Q/ajrG4Uq5kjlHO3HsY+oXz634h7exG+DYZpRFwSX80x0jBMgVMu9BVCF024o6Ets66YX/URlihwWA1VuP5adPO9iwxvJpD9adjDiKeoYwII4AXSxlpGmek7F+ym1Qh8vtdcS6eUP348NfNuJQty3ZIOtxE97lI317rR04st9NMDwCptAtCVUS7NApkIu2H26EhvTx9JG+vPtdl/RrWF/OkX0eoCxYdCgcPw2fixsBzVmUxxleuCD7GotEwOrQFJvIbk9Hw0Zc6bPmZLRSjIJ3/iprBGHr4QlNueJ5pLEnCCxT4VEvhMIRtAH5Ib39tpPiD97uYKRoIFFeHDxrvmHtx2MosQWRDbRFLh+aBPfInx/B3Xfcm2Lj9IZK1tOFwna966ESYXMLnHNFynHCk58flgaY9/GVF+d8Du527HmeJ36IQl5U07XyGmtq2XUnA3WKwvYklOotXcH4pDe+eGrxiLOYBkbBDdhjDtd7vz/NvbDHyxrjtMwqU8awyjoYKi63n+1pKF+J+NVZMeTOlMUmOgOuimj9vNrYWWRsugzd+xcWckFZo8jjSp0Q46i9fmHdtIciRM8XUmPZadzN97ykIgGLRUOozgVClQ/DhtTZrVnsUjkmfsfRYMl6pbtQ+u+Tzcli0KYo=
+  file: "Gravatar.zip"
+  skip_cleanup: true
+  on:
+    php: 7.0
+    tags: true
+    condition: $TRAVIS_PULL_REQUEST = false
