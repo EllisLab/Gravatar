@@ -5,7 +5,7 @@ return array(
 	'author_url'  => 'https://ellislab.com/',
 	'name'        => 'Gravatar',
 	'description' => 'Outputs Globally Recognized Avatars (Gravatars) for a given email address',
-	'version'     => '1.0.0',
+	'version'     => '1.0.1',
 	'namespace'   => 'User\Addons\Gravatar',
 	'settings_exist' => FALSE
 );
