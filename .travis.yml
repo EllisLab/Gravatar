@@ -10,7 +10,7 @@ install:
   - composer install
 
 script:
-  - vendor/jakub-onderka/php-parallel-lint/parallel-lint --exclude vendor .
+  - gravatar/vendor/jakub-onderka/php-parallel-lint/parallel-lint --exclude vendor .
 
 before_deploy:
   - composer install
