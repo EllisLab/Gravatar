@@ -95,6 +95,10 @@ Example: all monsters, all the time:
 
 ## Change Log
 
+### 1.0.1
+
+- adjusting build dependencies, no functional changes
+
 ### 1.0.0
 
 - Initial release. Boom!
