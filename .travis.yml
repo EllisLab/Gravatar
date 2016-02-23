@@ -13,7 +13,7 @@ script:
   - gravatar/vendor/jakub-onderka/php-parallel-lint/parallel-lint --exclude gravatar/vendor .
 
 before_deploy:
-  - composer install
+  - composer install --no-dev
   - zip -r 'Gravatar' gravatar
 
 deploy:
