@@ -109,16 +109,6 @@ class Gravatar {
 			$this->force_default
 		);
 
-		// bug in current forxer\Gravatar
-		// Full URLs given as the default image are double encoded
-		if (strncasecmp($this->default, 'http', 4) === 0)
-		{
-			$url = parse_url($gravatar);
-			parse_str(html_entity_decode($url['query']), $default_url);
-			$default_url['d'] = rawurldecode($default_url['d']);
-			$gravatar = $url['scheme'].'://'.$url['host'].$url['path'].'?'.http_build_query($default_url);
-		}
-
 		$this->return_data = $gravatar;
 	}
 

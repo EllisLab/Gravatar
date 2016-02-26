@@ -95,6 +95,10 @@ Example: all monsters, all the time:
 
 ## Change Log
 
+### 1.0.2
+
+- Updated [forxer/Gravatar lib](https://github.com/forxer/gravatar) to v1.3.1, allowing removal of a workaround for a bug in said library.
+
 ### 1.0.1
 
 - adjusting build dependencies, no functional changes
